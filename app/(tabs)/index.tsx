@@ -1,16 +1,14 @@
-import { Text, View } from "react-native";
+import { ScrollView, Text, View, Image } from "react-native";
 import { Link } from "expo-router";
+import { images } from "@/constants/images";
+import { icons } from "@/constants/icons";
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Hii Gokul</Text>
-      <Link href="/onboarding" >onboarding  </Link>
+    <View className="flex-1 bg-primary">
+      <Image source={images.bg} className="absolute w-full z-0" />
+      <ScrollView className="flex-1 px-5">
+        <Image source={icons.logo} className="w-212 h-10 mt-20 mb-5 mx-auto" />
+      </ScrollView>
     </View>
   );
 }
